@@ -1,0 +1,84 @@
+body,  html {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    transition: all .5s;
+    background: transparent;
+    user-select: none;
+}
+* {
+    box-sizing: border-box;
+}
+.click {
+    cursor: default;
+}
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 4px;
+    background-color: #2b2d3aec;
+    padding: 0 10px;
+    border: 1px solid #2b2d3aec;
+    box-shadow: 0px 0px 2px rgb(143, 143, 143) inset;
+}
+svg {
+    color: #fff;
+    width: 18px;
+    fill: #fff;
+    height: 18px;
+    opacity: .4;
+}
+button:hover svg {
+    opacity: 1;
+}
+button{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+}
+.grab{
+    /* cursor: grab; */
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    opacity: 1;
+}
+.ww {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.close {
+    width: 14px;
+    height: 14px;
+}
+
+.status > div{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #27c26c;
+}
+.status.paused > div {
+    background: #fa603c;
+}
+.status {
+    height: 100%;
+    width: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c2c2cf6;
+    border-radius: 100%;
+    padding: 2px;
+}
+#tik-tok {
+    letter-spacing: 1px;
+}
