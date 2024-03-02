@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TimeDoctor</title>
+    <link rel="stylesheet" href="../assets/index.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="sidebar-contents">
+                <div>
+                    <div class="item avatar">
+                        <div class="avatar">
+                            M
+                        </div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item active">
+                            <div class="icon">
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg>
+                            </div>
+                        </div>
+                        <div class="tooltip"><div>Timer</div></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="icon">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M3 13H11V3H3V13ZM3 21H11V15H3V21ZM13 21H21V11H13V21ZM13 3V9H21V3H13Z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="tooltip"><div>Dashboard</div></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="icon">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H80A16,16,0,0,0,64,48V64H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V192h16a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM80,48H208v69.38l-16.7-16.7a16,16,0,0,0-22.62,0L93.37,176H80Zm96,160H48V80H64v96a16,16,0,0,0,16,16h96ZM104,88a16,16,0,1,1,16,16A16,16,0,0,1,104,88Z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="tooltip"><div>ScreenCasts</div></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="icon">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M413.967 276.8c1.06-6.235 1.06-13.518 1.06-20.8s-1.06-13.518-1.06-20.8l44.667-34.318c4.26-3.118 5.319-8.317 2.13-13.518L418.215 115.6c-2.129-4.164-8.507-6.235-12.767-4.164l-53.186 20.801c-10.638-8.318-23.394-15.601-36.16-20.801l-7.448-55.117c-1.06-4.154-5.319-8.318-10.638-8.318h-85.098c-5.318 0-9.577 4.164-10.637 8.318l-8.508 55.117c-12.767 5.2-24.464 12.482-36.171 20.801l-53.186-20.801c-5.319-2.071-10.638 0-12.767 4.164L49.1 187.365c-2.119 4.153-1.061 10.399 2.129 13.518L96.97 235.2c0 7.282-1.06 13.518-1.06 20.8s1.06 13.518 1.06 20.8l-44.668 34.318c-4.26 3.118-5.318 8.317-2.13 13.518L92.721 396.4c2.13 4.164 8.508 6.235 12.767 4.164l53.187-20.801c10.637 8.318 23.394 15.601 36.16 20.801l8.508 55.117c1.069 5.2 5.318 8.318 10.637 8.318h85.098c5.319 0 9.578-4.164 10.638-8.318l8.518-55.117c12.757-5.2 24.464-12.482 36.16-20.801l53.187 20.801c5.318 2.071 10.637 0 12.767-4.164l42.549-71.765c2.129-4.153 1.06-10.399-2.13-13.518l-46.8-34.317zm-158.499 52c-41.489 0-74.46-32.235-74.46-72.8s32.971-72.8 74.46-72.8 74.461 32.235 74.461 72.8-32.972 72.8-74.461 72.8z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="tooltip"><div>Settings</div></div>
+                    </div>
+                    <div class="item-wrapper">
+                        <div class="item">
+                            <div class="icon">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="tooltip"><div>FAQ & Status</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="header">
+                <div class="top">
+                    <div class="contents">
+                        <div>
+                            <div class="heading">App Development</div>
+                            <div class="sub-heading">Development</div>
+                        </div>
+                        <div>
+                            <div class="timer-text">00:00:00</div>
+                        </div>
+                    </div>
+                </div>  
+                <div class="bottom">
+                    <div class="contents">
+                        <div></div>
+                        <div class="gray-text">
+                            Worked Today: <b>0m</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="timer-start">
+                    <div id="play-pause">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M133 440a35.37 35.37 0 0 1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37 7.46-27.53 19.46-34.33a35.13 35.13 0 0 1 35.77.45l247.85 148.36a36 36 0 0 1 0 61l-247.89 148.4A35.5 35.5 0 0 1 133 440z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-wrapper">
+                <div class="tasks-card">
+                    <div>
+                        <div>
+                            <div class="task-sidebar">
+                                <div>
+                                    <div class="input-wrapper">
+                                        <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></div>
+                                        <input placeholder="Search projecs & tasks" id="search-project-task" />
+                                    </div>
+                                </div>
+        
+                                <div class="scrollable show project-scrollable">
+                                    <div class="projects-opener">
+                                        <div>PROJECTS</div>
+                                        <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></div>
+                                    </div>
+    
+                                    <div class="project-list">
+                                        <div class="item active"><div>Development</div></div>
+                                        <div class="item"><div>General</div></div>
+                                        <div class="item"><div>Support</div></div>
+                                        <div class="item"><div>Study</div></div>
+                                        <div class="item"><div>Custom Work</div></div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tasks">
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <script src="../preload.js"></script> -->
+
+</body>
+</html>

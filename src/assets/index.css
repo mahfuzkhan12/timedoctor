@@ -1,0 +1,335 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-color: #e4e4e4;
+    user-select: none;
+}
+*{
+    box-sizing: border-box;
+}
+svg {
+    display: flex;
+}
+:root {
+    --header-bottom-height: 42px;
+    --muted: #767676;
+    /* --primary: #27c26c; */
+    --primary: #1a9551;
+    --white: #fff;
+    --black: #000;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+
+.sidebar {
+    position: relative;
+    height: 100vh;
+    background: #474959;
+    color: #a5a5a5;
+}
+.sidebar-contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* overflow-y: auto; */
+}
+.sidebar-contents > div {
+    display: grid;
+    gap: 6px;
+    padding: 10px;
+}
+.sidebar .item.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 100%;
+    background: #27c26c;
+    margin-bottom: 10px;
+}
+.sidebar .item {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    height: 42px;
+    position: relative;
+}
+.sidebar .item:not(.avatar):hover{
+    background: #313131;
+    border-radius: 4px;
+    color: #e8e8e8;
+}
+.sidebar .item.active {
+    color: #fff;
+}
+/* .sidebar .item::after{
+    content: "Hello";
+} */
+.sidebar .item.active::before{
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: -10px;
+    width: 6px;
+    background: #27c26c;
+    z-index: 99;
+    border-radius: 0 4px 4px 0;
+}
+.sidebar-contents::-webkit-scrollbar {
+    display: none;
+  }
+.sidebar svg {
+    width: 28px;
+    height: 28px;
+}
+.sidebar .tooltip{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    left: 60px;
+    display: none;
+    z-index: 999999999;
+}
+.item-wrapper {
+    position: relative;
+}
+.item-wrapper:hover .tooltip{
+    display: flex;
+}
+.sidebar .tooltip > div {
+    background: #4c4c4c;
+    padding: 8px 15px;
+    border-radius: 3px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+
+
+/* main */
+.header {
+    position: relative;
+}
+.header .top {
+    height: 58px;
+    width: 100%;
+    background: var(--primary);
+}
+.paused .header .top{
+    background: #6d6f74;
+}
+.header .bottom {
+    height: var(--header-bottom-height);
+    width: 100%;
+    border-bottom: 1px solid rgb(168, 168, 168);
+    background: #fff;
+}
+.heading {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.sub-heading {
+    font-size: 14px;
+    color: #c5c1c1;
+    font-weight: bold;
+}
+.timer-text {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+}
+.header .contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100%;
+    max-width: calc(100% - 80px);
+}
+.gray-text {
+    color: #5d5d5d;
+}
+.gray-text b {
+    color: #000;
+}
+
+.timer-start {
+    position: absolute;
+    height: calc(var(--header-bottom-height) * 2);
+    right: 0;
+    bottom: 0;
+    width: 80px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.timer-start svg {
+    width: 22px;
+    height: 22px;
+}
+.timer-start > div {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    border-radius: 100%;
+    color: #fff;
+}
+.paused .timer-start > div {
+    background: var(--primary);
+}
+.tasks-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    overflow-y: auto;
+    background: #fff;
+    left: 15px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #b6b6b6;
+}
+.tasks-card > div {
+    display: grid;
+    grid-template-columns: 250px auto;
+    height: 100%;
+}
+.tasks-card > div > div {
+    position: relative;
+    height: 100%;
+}
+.tasks-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.task-sidebar {
+    padding: 10px 10px 10px 10px;
+    display: grid;
+    gap: 8px;
+    border-right: 1px solid #d7d7d7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.input-wrapper {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    position: relative;
+}
+.input-wrapper input{
+    border: none;
+    width: 100%;
+    background: transparent;
+    padding: 12px 10px 12px 38px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+.input-wrapper input:focus-visible{
+    border-bottom: 2px solid;
+    outline: none;
+    background: #f1f1f1;
+    border-color: #767676;
+}
+.input-wrapper:hover input{
+    background: #f1f1f1;
+}
+.input-wrapper div {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-wrapper svg {
+    width: 25px;
+    height: 25px;
+}
+.projects-opener {
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--muted);
+    padding: 5px 10px;
+}
+.projects-opener:hover{
+    color: var(--black);
+}
+.projects-opener svg {
+    width: 18px;
+    height: 18px;
+    rotate: 0deg;
+    transition: all .3s;
+    color: var(--muted);
+}
+.project-scrollable.show .projects-opener svg {
+    rotate: 180deg;
+}
+.project-list {
+    display: grid;
+    gap: 3px;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: all .3s;
+}
+.project-list .item {
+    padding: 10px;
+    font-size: 14px;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-list .item:hover {
+    background:  #f2f2f2;
+}
+.project-list .item.active {
+    background:  #dcdcdc;
+}
+.main .scrollable {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    overflow-y: auto;
+}
+.scrollable.project-scrollable {
+    top: 60px;
+    padding: 0 10px;
+    border-top: 2px solid #dedede;
+    padding-top: 10px;
+}
