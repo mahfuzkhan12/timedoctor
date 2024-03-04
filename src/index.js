@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, Menu, screen, ipcMain, contentTracing, desktopCapturer } = require('electron');
+const { app, BrowserWindow, Tray, Menu, screen, ipcMain, contentTracing, desktopCapturer, globalShortcut } = require('electron');
 const mergeImg = require("merge-img")
 const path = require('path');
 
@@ -157,11 +157,13 @@ const pauseResume = (isPaused, fromIPC = false) => {
 }
 
 
+let idleTime = 0;
 app.on('ready', function() {
     createWindow()
     createActiviyBarWindow()
     createTray()
     pauseResume()
+
 });
 
 
