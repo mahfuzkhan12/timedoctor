@@ -156,6 +156,12 @@ const pauseResume = (isPaused, fromIPC = false) => {
     }
 }
 
+const registerKeyPress = () => {
+    globalShortcut.register('Alt+CommandOrControl+I', () => {
+        console.log('Electron loves global shortcuts!')
+    })
+}
+
 
 let idleTime = 0;
 app.on('ready', function() {
@@ -163,7 +169,7 @@ app.on('ready', function() {
     createActiviyBarWindow()
     createTray()
     pauseResume()
-
+    registerKeyPress()
 });
 
 

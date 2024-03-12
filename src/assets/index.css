@@ -333,3 +333,17 @@ svg {
     border-top: 2px solid #dedede;
     padding-top: 10px;
 }
+
+.worked-today {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.worked-today svg {
+    width: 18px;
+    height: 18px;
+    color: green;
+}
+.worked-today svg.no{
+    color: gray;
+}
